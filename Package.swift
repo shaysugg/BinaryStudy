@@ -6,14 +6,13 @@ import PackageDescription
 let package = Package(
     name: "BinaryStudyPackage",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "BinaryStudyPackage",
             targets: ["BinaryStudyPackage"]),
+        .library(name: "BinaryStudy", targets: ["BinaryStudy"])
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        .binaryTarget(name: "BinaryStudy", path: "Sources/BinaryStudy.xcframework"),
         .target(
             name: "BinaryStudyPackage"),
         .testTarget(

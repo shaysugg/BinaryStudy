@@ -1,0 +1,11 @@
+framework module BinaryStudy {
+  umbrella header "BinaryStudy.h"
+  export *
+
+  module * { export * }
+}
+
+module BinaryStudy.Swift {
+  header "BinaryStudy-Swift.h"
+  requires objc
+}
